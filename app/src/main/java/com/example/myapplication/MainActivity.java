@@ -4,6 +4,7 @@ import static android.os.VibrationEffect.createOneShot;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -105,10 +106,13 @@ public class MainActivity extends AppCompatActivity {
 //        if (==(((ImageView)findViewById((v.getId))).getDrawable())) //어떻게 이미지 비교를 하지?
 
 
-        Drawable sDraw = getResources().getDrawable(R.drawable.click_green);
-//        Drawable sDraw = ((ImageView)findViewById(v.getId())).getDrawable();
+        Drawable sDraw = getDrawable(R.drawable.click_green);
+        Bitmap bt1 = ((BitmapDrawable)sDraw).getBitmap();
 
-        if ( ((ImageView)findViewById((v.getId()))).getDrawable() == getResources().getDrawable(R.drawable.click_green) ){
+        Drawable bDraw = ((ImageView)findViewById(v.getId())).getDrawable();
+        Bitmap bt2 =  ((BitmapDrawable)bDraw).getBitmap();
+
+        if ( bt1.sameAs(bt2) ){
             score ++ ;
             ((ImageView)findViewById((v.getId()))).setImageDrawable((BitmapDrawable) getResources().getDrawable(R.drawable.click_red));
             btnValue --;
