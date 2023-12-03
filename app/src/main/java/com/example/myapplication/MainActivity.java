@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         Bitmap bt1 = ((BitmapDrawable)sDraw).getBitmap();
 
         Drawable bDraw = ((ImageView)findViewById(v.getId())).getDrawable();
-        Bitmap bt2 =  ((BitmapDrawable)bDraw).getBitmap();
+        Bitmap bt2 =  ((BitmapDrawable)bDraw).getBitmap(); // 왜 안되는데
 
         if ( bt1.sameAs(bt2) ){
             score ++ ;
