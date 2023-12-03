@@ -109,11 +109,14 @@ public class MainActivity extends AppCompatActivity {
 
 //        이미지 바꾸는 코드입니다, 이해해봅시다...............
 
+
+//        업로드 테스트 문구입니다. 무시해주세요
+
         Drawable sDraw = getDrawable(R.drawable.click_green);
         Bitmap bt1 = ((BitmapDrawable)sDraw).getBitmap();
 
         Drawable bDraw = ((ImageView)findViewById(v.getId())).getDrawable();
-        Bitmap bt2 =  ((BitmapDrawable)bDraw).getBitmap(); // 왜 안되는데
+        Bitmap bt2 =  ((BitmapDrawable)bDraw).getBitmap();
 
         if ( bt1.sameAs(bt2) ){
             score ++ ;
