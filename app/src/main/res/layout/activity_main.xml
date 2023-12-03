@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:weightSum="10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1.5"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="푸쉬게임!"
+            android:textSize="50sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="time : 0"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:id="@+id/time"/>
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="score : 0"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:id="@+id/score"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="7.5"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn1"
+                android:onClick="fn_Clicker"/>
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn2"
+                android:onClick="fn_Clicker"/>
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn3"
+                android:onClick="fn_Clicker"/>
+
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                >-->
+
+
+
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn2"-->
+<!--                android:onClick="fn_Clicker"/>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn3"-->
+<!--                android:onClick="fn_Clicker"/>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn4"
+                android:onClick="fn_Clicker"
+                />
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn5"
+                android:onClick="fn_Clicker"
+                />
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn6"
+                android:onClick="fn_Clicker"
+                />
+
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn4"-->
+<!--                android:onClick="fn_Clicker"/>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn5"-->
+<!--                android:onClick="fn_Clicker"/>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn6"-->
+<!--                android:onClick="fn_Clicker"/>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn7"
+                android:onClick="fn_Clicker"/>
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn8"
+                android:onClick="fn_Clicker"/>
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn9"
+                android:onClick="fn_Clicker"/>
+
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn7"-->
+<!--                android:onClick="fn_Clicker"/>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn8"-->
+<!--                android:onClick="fn_Clicker"/>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn9"-->
+<!--                android:onClick="fn_Clicker"/>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn10"
+                android:onClick="fn_Clicker"/>
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn11"
+                android:onClick="fn_Clicker"/>
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/click_red"
+                android:id="@+id/btn12"
+                android:onClick="fn_Clicker"/>
+
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn10"-->
+<!--                android:onClick="fn_Clicker"/>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn11"-->
+<!--                android:onClick="fn_Clicker"/>-->
+<!--            <Button-->
+<!--                android:layout_width="0sp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text=""-->
+<!--                android:textSize="30sp"-->
+<!--                android:id="@+id/btn12"-->
+<!--                android:onClick="fn_Clicker"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
