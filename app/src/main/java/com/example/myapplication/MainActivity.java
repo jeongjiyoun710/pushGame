@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
 //
 //        if (==(((ImageView)findViewById((v.getId))).getDrawable())) //어떻게 이미지 비교를 하지?
-
+//
 
         Drawable sDraw = getDrawable(R.drawable.click_green);
         Bitmap bt1 = ((BitmapDrawable)sDraw).getBitmap();
