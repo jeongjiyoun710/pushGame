@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 import java.util.Timer;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.btn12
     };
 
-    float count = 30; //30초
+    float count = 5; //30초
 
     int number[] = {0,0,0,0,0};
 
@@ -155,20 +156,27 @@ public class MainActivity extends AppCompatActivity {
 
         if(count <= 0){
 //          setContentView(R.layout.activity_main);
+            //Intent intent = new Intent(this, endActivity.class);
+            //startActivity(intent);
+            Log.e("PUSHGAME","게임종료");
+            timer.cancel();
             Intent intent = new Intent(this, endActivity.class);
+//            intent.putExtra("SCORE1",score);
             startActivity(intent);
         }else{
             count-=0.01;
+
+            //지금 화면 출력하는 애한테 run()으로 무엇을 출력할 건지 알려주고 출력을 요청해줘
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    ((TextView)findViewById(R.id.time)).setText("time : "+String.format("%.2f", count));
+
+                }
+            });
         }
 
-        //지금 화면 출력하는 애한테 run()으로 무엇을 출력할 건지 알려주고 출력을 요청해줘
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                ((TextView)findViewById(R.id.time)).setText("time : "+String.format("%.2f", count));
 
-            }
-        });
 
 
     } //시간을 만든 스레드의 시간을 지금 현재 출력되는 메인 스레드에 요소를 추가하는 변수
