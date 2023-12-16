@@ -22,18 +22,26 @@ public class HttpPost {
 
 //        Log.e("호출","호출");
 
-        RequestQueue queue = Volley.newRequestQueue(context);
-        String url = "http://10.171.6.155:8888/login"; // POST 요청을 보낼 URL
+        RequestQueue queue = Volley.newRequestQueue(context);  //--잠깐만 이거 뭐야???
+        // -- https://developer.android.com/training/volley/simple?hl=ko
+
+        String url = "http://10.171.6.155:8888/login"; // POST 요청을 보낼 URL     -- POST 요청을 보낼 URL이 왜 필요한가? 스프링이 웹에서 실행되는 걸까..?
 
         // POST로 전송할 데이터를 JSONObject에 담기
-        JSONObject postData = new JSONObject();
+        JSONObject postData = new JSONObject();  //--객체 형식으로 postData를 변수를 만들어준다.
+        //--대충 js 형식으로는  =>  let postData = {key : value, key : value};
+
         try {
-            postData.put("score", score);
-            postData.put("name", name);
+            postData.put("score", score);  // --score 변수를 postData에 객체 형식으로 보내주는 역할
+            postData.put("name", name);  // --name 변수를 postData에 객체 형식으로 보내주는 역할
+
+            //--여기서 의문, 이 코드를 쓰는 방법은 알겠지만, 이 코드를 그대로 가져가서 쓰면 먹힐까?
 
         } catch (JSONException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // --에러를 상세하게 표현
         }
+
+        // -- 먼저 이 위에 값을 저장하는 형식부터 모두 이해하고 사용 후 밑 코드를 보자. ================================
 
 
         // JSON 형식의 응답을 받기 위한 POST 요청 생성
