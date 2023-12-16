@@ -160,8 +160,8 @@ public class MainActivity extends AppCompatActivity {
             //startActivity(intent);
             Log.e("PUSHGAME","게임종료");
             timer.cancel();
-            Intent intent = new Intent(this, endActivity.class);
-//            intent.putExtra("SCORE1",score);
+            Intent intent = new Intent(MainActivity.this, endActivity.class);
+            intent.putExtra("점수",score);
             startActivity(intent);
         }else{
             count-=0.01;

@@ -16,10 +16,13 @@ import com.android.volley.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class endActivity extends AppCompatActivity {
 
     Intent intent = new Intent();
+
+//    TextView userScoreBox = findViewById(R.id.userScore);
     int score = 0;
 
 //    EditText nameBox = (EditText)findViewById(R.id.userName);
@@ -38,12 +41,17 @@ public class endActivity extends AppCompatActivity {
 
         HttpPost httpPost = new HttpPost(); //httpPost 타입의 명령어 생성
         httpPost.sendRequest(this, new Response.Listener<JSONObject>() {
+            JSONObject postData = new JSONObject();
             @Override
             public void onResponse(JSONObject jsonObject) {
 
                 try {
-                    JSONArray array = jsonObject.getJSONArray("USER_INFO");  //이게 대체 뭘까...
-                    Log.e("리턴",((JSONObject)array.get(0)).getString("address_1"));
+
+                    postData.put("score", score);
+                    postData.put("name", userName);
+
+//                    JSONArray array = jsonObject.getJSONArray("USER_INFO");  //이게 대체 뭘까...
+//                    Log.e("리턴",((JSONObject)array.get(0)).getString("address_1"));
                 } catch (JSONException e) {
                     throw new RuntimeException(e); //try 도중, 에러가 뜨면 그 에러의 세부사항을 알려주는 명령어
                 }
@@ -87,21 +95,27 @@ public class endActivity extends AppCompatActivity {
         } else if (userClick == rank) {
 //            Intent intent = new Intent(this, rankActivity.class);
 //            startActivity(intent);
+
+            TextView userScoreBox = (TextView) findViewById(R.id.userScore);
+            userScoreBox.setText(score);
         }
 
 
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.end_activity);
 
-        Intent intent = new Intent();
+        Intent intent = getIntent();
 
 
-//        score = intent.getIntExtra("SCORE1", score);
+        score = intent.getIntExtra("점수", 0);
+        Log.i("점수", "점수 : "+score);
 //        ((TextView)findViewById(R.id.userScore)).setText(score);
+//        userScoreBox.setText(score);
     }
 
 }

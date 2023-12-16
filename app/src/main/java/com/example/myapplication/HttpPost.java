@@ -22,7 +22,7 @@ public class HttpPost {
 
 //        Log.e("호출","호출");
 
-        RequestQueue queue = Volley.newRequestQueue(context);  //--잠깐만 이거 뭐야???
+        RequestQueue queue = Volley.newRequestQueue(context);  //--잠깐만 이거 뭐야??? => 대충 인터넷에 요청을 보내는 명령어인 것 같다...
         // -- https://developer.android.com/training/volley/simple?hl=ko
 
         String url = "http://10.171.6.155:8888/login"; // POST 요청을 보낼 URL     -- POST 요청을 보낼 URL이 왜 필요한가? 스프링이 웹에서 실행되는 걸까..?
