@@ -160,9 +160,9 @@ public class MainActivity extends AppCompatActivity {
             //startActivity(intent);
             Log.e("PUSHGAME","게임종료");
             timer.cancel();
-            Intent intent = new Intent(MainActivity.this, endActivity.class);
-            intent.putExtra("점수",score);
-            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, endActivity.class); // Intent (전송경로)에 전송 위치와 전송 받을 위치를 지정한다.
+            intent.putExtra("점수",score); // "점수"라는 이름으로 score라는 int값을 넣어준다. (예시로 택배 상자에 물건을 넣는 느낌)
+            startActivity(intent); // 전송
         }else{
             count-=0.01;
 
