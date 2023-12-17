@@ -250,10 +250,10 @@
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="1.6"
-            android:text="랭킹확인"
+            android:text="나가기"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:id="@+id/rankBtn"
+            android:id="@+id/F5"
             android:onClick="fn_endlay"/>
 
     </LinearLayout>

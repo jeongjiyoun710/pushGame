@@ -94,9 +94,14 @@ public class endActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(this, text, duration);
             toast.show();
-        } else if (v.getId() == R.id.rankBtn) {
-//            Intent intent = new Intent(this, rankActivity.class);
-//            startActivity(intent);
+
+            Intent intent = new Intent(this, startActivity.class);
+            startActivity(intent);
+
+
+        } else if (v.getId() == R.id.F5) {
+            Intent intent = new Intent(this, startActivity.class);
+            startActivity(intent);
 
         }
 
@@ -131,7 +136,7 @@ public class endActivity extends AppCompatActivity {
 
                     ((TextView)findViewById(rankNames[i])).setText(jb.getString("id"));
                     ((TextView)findViewById(rankScores[i])).setText(jb.getString("score"));
-                    ((TextView)findViewById(rankDays[i]))  .setText(jb.getString("days"));
+                    ((TextView)findViewById(rankDays[i])).setText(jb.getString("dt"));
 
                 }
 
