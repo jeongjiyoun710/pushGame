@@ -30,10 +30,11 @@ public class endActivity extends AppCompatActivity {
 //        name = "";
 //        Editable name = ((Editable) ).getText(); //사용자 닉네임
         EditText name = (findViewById(R.id.userName));
-        Editable userName = name.getText();
+        String strName = name.getText().toString();
 //        score = score;
 
         HttpPost httpPost = new HttpPost(); //httpPost 타입의 명령어 생성
+
         httpPost.sendRequest(this, new Response.Listener<JSONObject>() {
             JSONObject postData = new JSONObject();
             @Override
@@ -42,7 +43,7 @@ public class endActivity extends AppCompatActivity {
                 try {
                     // 분명  실행은 시켰는데, HttpPost.java가 실행이 된다. 왜일까? => 이거 어떻게 고치죠..... 무슨 명령이 있는 거 같은데 뭐가 뭔지를 모르겠는데
                     postData.put("score", score);
-                    postData.put("name", userName);
+                    postData.put("name", strName);
                     Log.i("태그", "obj"+postData);
 //                    JSONArray array = jsonObject.getJSONArray("USER_INFO");  //이게 대체 뭘까...
 //                    Log.e("리턴",((JSONObject)array.get(0)).getString("address_1"));
@@ -50,7 +51,7 @@ public class endActivity extends AppCompatActivity {
                     throw new RuntimeException(e); //try 도중, 에러가 뜨면 그 에러의 세부사항을 알려주는 명령어
                 }
             }
-        } , score, ""); //이거는 뭐지
+        } , score, strName); //이거는 뭐지
 
 
     }
