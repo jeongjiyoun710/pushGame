@@ -101,6 +101,34 @@ public class endActivity extends AppCompatActivity {
 
     }
 
+    // 처음에 화면 열릴떄 랭커를 조회하여 세팅한다.
+    public void fn_setRanker(){
+
+
+        HttpPost httpPost = new HttpPost(); //httpPost 타입의 명령어 생성
+
+        httpPost.test(this, new Response.Listener<JSONObject>() {
+            JSONObject postData = new JSONObject();
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+
+                try {
+                  JSONArray ja = jsonObject.getJSONArray("RESULT");
+
+                  JSONObject jb1 = ja.getJSONObject(0);
+                    JSONObject jb2 = ja.getJSONObject(1);
+
+                    Toast.makeText(getApplicationContext(),jb1.getString("id"),Toast.LENGTH_LONG).show();
+
+
+                } catch (JSONException e) {
+                    throw new RuntimeException(e); //try 도중, 에러가 뜨면 그 에러의 세부사항을 알려주는 명령어
+                }
+            }
+        } ); //이거는 뭐지
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +141,11 @@ public class endActivity extends AppCompatActivity {
         score = intent.getIntExtra("점수", 0); // getIntExtra는 mainA...에서 보낸 값이 int값인 (name) 을 가져온다. 다만 int는 (name) 뒤 기본값이 있어야한다. (getStringExtra 제외)
         Log.i("점수", "점수 : "+score);
         ((TextView)findViewById(R.id.userScore)).setText("점수 : "+score);  // 안됐던 이유 : text를 넣을 때는 앞에 문자가 있어야한다. ex) "점수 : "+(변수);
+
+
+        fn_setRanker();
+
+
     }
 
 }
