@@ -19,6 +19,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.lang.reflect.Array;
+
 public class endActivity extends AppCompatActivity {
 
     Intent intent = new Intent();
@@ -101,6 +103,12 @@ public class endActivity extends AppCompatActivity {
 
     }
 
+    int[ ] rankNames = {R.id.rankName1, R.id.rankName2, R.id.rankName3, R.id.rankName4, R.id.rankName5};
+    int[ ] rankScores = {R.id.rankScore1, R.id.rankScore2, R.id.rankScore3, R.id.rankScore4, R.id.rankScore5 };
+    int[ ] rankDays = {R.id.rankDay1, R.id.rankDay2, R.id.rankDay3, R.id.rankDay4, R.id.rankDay5};
+
+
+
     // 처음에 화면 열릴떄 랭커를 조회하여 세팅한다.
     public void fn_setRanker(){
 
@@ -115,10 +123,19 @@ public class endActivity extends AppCompatActivity {
                 try {
                   JSONArray ja = jsonObject.getJSONArray("RESULT");
 
-                  JSONObject jb1 = ja.getJSONObject(0);
-                    JSONObject jb2 = ja.getJSONObject(1);
+                 int jaLength = ja.length();
 
-                    Toast.makeText(getApplicationContext(),jb1.getString("id"),Toast.LENGTH_LONG).show();
+                for(int i = 0; i<jaLength; i++){
+
+                    JSONObject jb = ja.getJSONObject(i);
+
+                    ((TextView)findViewById(rankNames[i])).setText(jb.getString("id"));
+                    ((TextView)findViewById(rankScores[i])).setText(jb.getString("score"));
+                    ((TextView)findViewById(rankDays[i]))  .setText(jb.getString("days"));
+
+                }
+
+
 
 
                 } catch (JSONException e) {

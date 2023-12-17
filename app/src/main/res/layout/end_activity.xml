@@ -62,21 +62,24 @@
                     android:layout_weight="1.5"
                     android:text="이름"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankName1"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:text="100점"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankScore1"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:text="2019/08/12"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankDay1"/>
                 
             </LinearLayout>
             <LinearLayout
@@ -92,21 +95,24 @@
                     android:layout_weight="1.5"
                     android:text="이름"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankName2"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:text="100점"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankScore2"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:text="2019/08/12"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankDay2"/>
 
             </LinearLayout>
             <LinearLayout
@@ -122,21 +128,24 @@
                     android:layout_weight="1.5"
                     android:text="이름"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankName3"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:text="100점"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankScore3"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:text="2019/08/12"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankDay3"/>
                 
             </LinearLayout>
             <LinearLayout
@@ -152,21 +161,24 @@
                     android:layout_weight="1.5"
                     android:text="이름"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankName4"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:text="100점"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankScore4"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:text="2019/08/12"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankDay4"/>
 
             </LinearLayout>
             <LinearLayout
@@ -182,21 +194,24 @@
                     android:layout_weight="1.5"
                     android:text="이름"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankName5"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:text="100점"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankScore5"/>
                 <TextView
                     android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:text="2019/08/12"
                     android:textSize="15sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/rankDay5"/>
                 
             </LinearLayout>
 
