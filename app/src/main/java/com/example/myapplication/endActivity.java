@@ -75,18 +75,17 @@ public class endActivity extends AppCompatActivity {
 
     public void fn_endlay(View v){
 
-        Button retry = (Button) findViewById(R.id.retryBtn);
-        Button upload = (Button) findViewById(R.id.uploadBtn);
-        Button rank = (Button) findViewById(R.id.rankBtn);
+        Log.e("버튼 눌림 ", "버튼 클릭 ") ;
 
-        Button userClick = (Button) findViewById(v.getId());
-
-        if(userClick == retry){
+        if(v.getId() == R.id.retryBtn){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-        } else if (userClick == upload) {
+        } else if (v.getId()==R.id.uploadBtn) {
+
+            Log.e("버튼 눌림 ", "fn_Save() ") ;
+
             fn_save();
-        } else if (userClick == rank) {
+        } else if (v.getId() == R.id.rankBtn) {
 //            Intent intent = new Intent(this, rankActivity.class);
 //            startActivity(intent);
 
