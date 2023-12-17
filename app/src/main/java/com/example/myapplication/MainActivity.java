@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if ( score < 0 ) {
-            finish();
+//            finish();
         }
     }
 
