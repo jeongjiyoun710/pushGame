@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -85,6 +86,12 @@ public class endActivity extends AppCompatActivity {
             Log.e("버튼 눌림 ", "fn_Save() ") ;
 
             fn_save();
+
+            CharSequence text = "저장되었습니다!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(this, text, duration);
+            toast.show();
         } else if (v.getId() == R.id.rankBtn) {
 //            Intent intent = new Intent(this, rankActivity.class);
 //            startActivity(intent);

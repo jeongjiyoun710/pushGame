@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.btn12
     };
 
-    float count = 5; //30초
+    float count = 30; //30초
 
     int number[] = {0,0,0,0,0};
 
